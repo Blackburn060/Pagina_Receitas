@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #FF672F;
+}
+
+.header .logo {
+    max-height: 70px;
+    max-width: 70px;
+    left: 11px;
+    top: 6px;
+    position: absolute;
+}
+
+.header .titulo {
+    font-family: 'Montserrat';
+    padding-left: 70px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF
+}
+
+.header .frase-titulo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    padding-left: 370px;
+    color: #FFFFFF;
+}
