@@ -1,0 +1,17 @@
+.menu {
+    background-color: #D9D9D9;
+    font-size: 15px;
+    left: 0px;
+    top: 105px;
+}
+
+mat-tab-group {
+    font-size: 16px;
+    color: black; 
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+    

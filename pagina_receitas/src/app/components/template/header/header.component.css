@@ -14,8 +14,8 @@
 }
 
 .header .titulo {
-    font-family: 'Montserrat';
-    padding-left: 75px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 78px;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -24,13 +24,19 @@
 }
 
 .header .frase-titulo {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 1200;
+    font-weight: 900;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 20px;
     text-align: center;
-    padding-left: 370px;
+    padding-left: 330px;
     color: #FFFFFF;
     height: 5vh
+}
+
+.header .entrada-usuario {
+    max-width: 75px;
+    max-height: 75px;
+    padding-left: 5px;
 }
