@@ -11,6 +11,9 @@ import { MenuComponent } from './components/template/header/menu/menu.component'
 import { MatTabsModule } from '@angular/material/tabs';
 import { BodyComponent } from './components/template/header/body/body.component';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +26,10 @@ import { BodyComponent } from './components/template/header/body/body.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatTabsModule
-    
+    MatTabsModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatButtonModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

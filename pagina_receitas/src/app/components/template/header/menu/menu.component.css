@@ -1,6 +1,6 @@
 .menu {
     background-color: #D9D9D9;
-    font-size: 15px;
+    font-size: 10px;
     left: 0px;
     top: 105px;
 }
@@ -12,6 +12,8 @@ mat-tab-group {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-
-    
+.separator {
+    border-left: 1px solid #ccc; /* Altere a cor conforme necessário */
+    margin: 0 10px; /* Adicione algum espaço à esquerda e à direita do separador */
+    height: 30%; /* Ajuste a altura conforme necessário */
+}

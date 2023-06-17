@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class MenuComponent {
-  menuAberto = true;
-  retrairMenu(): void {
-    this.menuAberto = false;
-  }
 
 }
-
-
