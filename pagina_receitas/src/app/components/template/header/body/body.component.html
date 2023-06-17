@@ -1,11 +1,18 @@
 <div class="titulo-principal">
-    Seu Site de Receitas, rápido e prático.
+  Seu Site de Receitas, rápido e prático.
 </div>
 
-<mat-form-field>
-    <input matInput placeholder="Procure uma receita, um prato, ingrediente..." [(ngModel)]="searchQuery">
-    <button mat-button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
-      <mat-icon>close</mat-icon>
-    </button>
-</mat-form-field>
-  
+<form class="barra-de-pesquisa" action="/pesquisar" method="get">
+  <input type="texto" name="q" placeholder="Procure uma receita, um prato, ingrediente...">
+  <button type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png" alt="botao-pesquisa" border="0"></button>
+</form>
+
+<div class="titulo-novidades">
+  Novidades
+</div>
+<div class="titulo-receitas-favoritas">
+  Receitas favoritas
+</div>
+<div class="titulo-noticias">
+  Notícias
+</div>
