@@ -3,6 +3,8 @@
     font-size: 10px;
     left: 0px;
     top: 105px;
+    display: flex;
+    justify-content: space-between;
 }
 
 mat-tab-group {
@@ -13,7 +15,8 @@ mat-tab-group {
 }
 
 .separator {
-    border-left: 1px solid #ccc; /* Altere a cor conforme necessário */
-    margin: 0 10px; /* Adicione algum espaço à esquerda e à direita do separador */
-    height: 30%; /* Ajuste a altura conforme necessário */
+    border-left: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    height: 30%;
 }

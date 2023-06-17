@@ -20,7 +20,7 @@
     font-weight: 800;
     font-size: 32px;
     line-height: 39px;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .header .frase-titulo {
@@ -30,9 +30,9 @@
     font-size: 18px;
     line-height: 20px;
     text-align: center;
-    padding-left: 330px;
+    padding-left: 40%;
     color: #FFFFFF;
-    height: 5vh
+    height: 5vh;
 }
 
 .header .entrada-usuario {
