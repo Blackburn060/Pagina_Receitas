@@ -1,1 +1,11 @@
+<div class="titulo-principal">
+    Seu Site de Receitas, rápido e prático.
+</div>
 
+<mat-form-field>
+    <input matInput placeholder="Procure uma receita, um prato, ingrediente..." [(ngModel)]="searchQuery">
+    <button mat-button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+      <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+  

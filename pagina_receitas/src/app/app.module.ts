@@ -10,9 +10,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MenuComponent } from './components/template/header/menu/menu.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BodyComponent } from './components/template/header/body/body.component';
+import { MatIconModule } from '@angular/material/icon';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatTabsModule,
     MatMenuModule,
     MatToolbarModule,
-    MatButtonModule    
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
