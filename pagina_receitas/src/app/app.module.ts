@@ -17,6 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MinhasReceitasComponent } from './paginas/MinhasReceitas/MinhasReceitas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,9 +27,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     MenuComponent,
     BodyComponent,
+    MinhasReceitasComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -36,12 +38,14 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule,
     MatIconModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
- 
+export class AppModule {
+
 }
