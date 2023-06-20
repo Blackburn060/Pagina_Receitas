@@ -1,124 +1,100 @@
-<head>
-  <title>Meu Site de Receitas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
 
-    h1 {
-      color: #FF672F;
-    }
-
-    h2 {
-      color: #555;
-    }
-
-    form {
-      width: 400px;
-      margin-top: 20px;
-    }
-
-    label {
-      display: inline-block;
-      vertical-align: top;
-      margin-top: 5px;
-      color: #000000;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ddd;
-    }
-    
-  
-
-    #imagem-preview {
-      max-width: 300px;
-      max-height: 300px;
-      border: 1px solid #000;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-
-    input[type="submit"] {
-      background-color: #555;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #333;
-    }
-    
-  </style>
-
-<script>
-  function exibirFoto(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        var imagemPreview = document.getElementById('imagem-preview');
-        imagemPreview.src = e.target.result;
-      };
-      reader.readAsDataURL(input.files[0]);
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
   }
-</script>
 
-</head>
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
 
 <body>
-  <h1>Insira uma receita nova</h1>
-
-  <input type="file" onchange="exibirFoto(this)">
-  <img id="imagem-preview">
+<div class="container">
+  <h1>Adicionar Receita</h1>
   <form>
-    <label for="nome">Nome da Receita:</label>
-    <input type="text" id="nome" name="nome" required><br>
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
 
+    <div class="form-group">
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecione uma categoria</option>
+        <option value="entrada">Entrada</option>
+        <option value="prato-principal">Prato Principal</option>
+        <option value="sobremesa">Sobremesa</option>
+      </select>
+    </div>
 
-    <label for="categoria" class="categoria-label">Categoria:</label>
-    <select id="categoria" name="categoria" class="categoria-select">
-      <option value="opcao0">Selecione</option>
-      <option value="opcao1">Salgados</option>
-      <option value="opcao2">Doces</option>
-      <option value="opcao3">Massas</option>
-      <option value="opcao4">Sopas</option>
-      <option value="opcao5">Comidas Brasileiras</option>
-      <option value="opcao6">Sobremesas</option>
-      <option value="opcao7">Saudavel</option>
-      <option value="opcao8">Bebidas</option>
-      <option value="opcao9">Bolos e tortas</option>
-      <option value="opcao10">Carnes</option>
+    <div class="form-group">
+      <label for="ingredientes">Ingredientes:</label>
+      <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+    </div>
 
+    <div class="form-group">
+      <label for="modo-preparo">Modo de Preparo:</label>
+      <textarea id="modo-preparo" name="modo-preparo" rows="4" required></textarea>
+    </div>
 
-    </select>
-    
-    <label for="ingredientes" class="ingredientes-label">Ingredientes:</label>
-    <textarea id="ingredientes" name="ingredientes" required></textarea><br>
-
-    <label for="modo-preparo">Modo de Preparo:</label>
-    <textarea id="modo-preparo" name="modo-preparo" required></textarea><br>
-
-    <input type="submit" value="Enviar Receita">
+    <button type="submit">Adicionar Receita</button>
   </form>
+</div>
 </body>
