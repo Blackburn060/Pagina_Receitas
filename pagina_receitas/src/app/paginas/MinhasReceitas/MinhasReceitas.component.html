@@ -1,108 +1,55 @@
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-  }
+<div class="titulo">Adicionar Receita</div>
+<div style="display: flex; justify-content: center; min-width: 100%;">
+  <div class="container">
+    <div class="formulario">
+      <div class="informacoes">
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome da Receita:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+          <div class="form-group">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="Doces">Doces</option>
+              <option value="Salgados">Salgados</option>
+              <option value="Comidas brasileiras">Comidas brasileiras</option>
+              <option value="Bebidas">Bebidas</option>
+              <option value="Alimentos saudavais">Alimentos saudaveis</option>
+              <option value="sobremesa">Sobremesa</option>
+              <option value="Bolos e tortas">Bolos e tortas</option>
+              <option value="Massas">Massas</option>
+              <option value="Sopas">Sopas</option>
+              <option value="Carnes">Carnes</option>
+              <option value="Comidas extrangeiras">Comidas estrangeiras</option>
 
-  h1 {
-    font-size: 55px;
-    font-weight: bold;
-    margin-top: 0;
-  }
+            </select>
+          </div>
 
-  p {
-    margin-bottom: 20px;
-  }
+          <div class="form-group">
+            <label for="ingredientes">Ingredientes:</label>
+            <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+          </div>
 
-  .form-group {
-    margin-bottom: 20px;
-  }
+          <div class="form-group">
+            <label for="modo-preparo">Modo de Preparo:</label>
+            <textarea id="modo-preparo" name="modo-preparo" rows="4" required></textarea>
+          </div>
+        </form>
+      </div>
 
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-
-  button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-  button:hover {
-    background-color: #45a049;
-  }
-</style>
-
-<body>
-<div class="container">
-  <h1>Adicionar Receita</h1>
-  <form>
-    <div class="form-group">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-    </div>
-
-    <div class="form-group">
-      <label for="categoria">Categoria:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="">Selecione uma categoria</option>
-        <option value="Doces">Doces</option>
-        <option value="Salgados">Salgados</option>
-        <option value="Comidas brasileiras">Comidas brasileiras</option>
-        <option value="Bebidas">Bebidas</option>
-        <option value="Alimentos saudavais">Alimentos saudaveis</option>
-        <option value="sobremesa">Sobremesa</option>
-        <option value="Bolos e tortas">Bolos e tortas</option>
-        <option value="Massas">Massas</option>
-        <option value="Sopas">Sopas</option>
-        <option value="Carnes">Carnes</option>
-        <option value="Comidas extrangeiras">Comidas estrangeiras</option>
-
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="ingredientes">Ingredientes:</label>
-      <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="modo-preparo">Modo de Preparo:</label>
-      <textarea id="modo-preparo" name="modo-preparo" rows="4" required></textarea>
-    </div>
-
-    <button type="submit">Adicionar Receita</button>
-  </form>
-</div>
-</body>
+      <div class="imagens">
+        <label>Inserir Imagens:</label>
+        <input type="file" id="file-input" (change)="onFileSelected($event)" accept="image/*" class="file-input">
+        <label for="file-input" class="file-label">Escolha um arquivo</label>
+        <label>Imagens:</label>
+        <div class="images-container">
+          <div *ngFor="let image of images">
+            <div class="image-block" (click)="removeImage(image)">
+              <img [src]="image" alt="Imagem" width="100" height="100">
+            </div>
+          </div>
+        </div>
+      </div>
