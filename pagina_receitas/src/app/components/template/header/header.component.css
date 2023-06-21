@@ -20,8 +20,13 @@
     font-weight: 800;
     font-size: 32px;
     line-height: 39px;
-    color: #FFFFFF;
+    color: transparent;
+    background: linear-gradient(to right, #05c1da, #9900ff);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
+
+
 
 .header .frase-titulo {
     font-family: 'Montserrat', sans-serif;

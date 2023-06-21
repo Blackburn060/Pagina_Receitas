@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #ec9378;
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,7 +40,7 @@ textarea {
   width: 95%;
 
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #f58318;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -48,13 +48,13 @@ textarea {
 select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #f58318;
   border-radius: 4px;
   font-size: 16px;
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #b3b9b3;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #b3b9b3;
 }
 
 .container {
@@ -75,8 +75,9 @@ button:hover {
   min-height: 560px;
   min-width: 960px;
 
-  border: 1px solid #ccc;
+  border: 1px solid #f58318;
   border-radius: 4px;
+  background: linear-gradient(to right, #ebe4eb, #e4740b);
 }
 
 .formulario {
@@ -137,8 +138,8 @@ button:hover {
 
 .file-label {
   width: 427px;
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #b3b9b3;
+  color: #0e0000;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -147,7 +148,7 @@ button:hover {
 }
 
 .file-label:hover {
-  background-color: #45a049;
+  background-color: #b3b9b3;
 }
 
 .image-block {
