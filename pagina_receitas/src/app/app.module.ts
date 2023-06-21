@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MinhasReceitasComponent } from './paginas/MinhasReceitas/MinhasReceitas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaDeReceitasComponent } from './paginas/ListaDeReceitas/ListaDeReceitas.component';
+import { ReceitasService } from './Servicos/Receitas.service';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     BodyComponent,
     MinhasReceitasComponent,
+    ListaDeReceitasComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -43,7 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ReceitasService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
