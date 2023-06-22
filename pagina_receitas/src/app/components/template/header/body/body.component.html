@@ -1,18 +1,56 @@
-<div class="titulo-principal">
-  Seu Site de Receitas, rápido e prático.
+<div class="container-titulo">
+  <div class="titulo-principal">
+    Seu Site de Receitas, rápido e prático.
+  </div>
+  <div class="barra-de-pesquisa" action="/pesquisar" method="get">
+    <input type="texto" name="q" placeholder="Procure uma receita, um prato, ingrediente...">
+    <button class="botao-pesquisa" type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png"
+        alt="botao-pesquisa" border="0"></button>
+  </div>
 </div>
-
-<form class="barra-de-pesquisa" action="/pesquisar" method="get">
-  <input type="texto" name="q" placeholder="Procure uma receita, um prato, ingrediente...">
-  <button type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png" alt="botao-pesquisa" border="0"></button>
-</form>
-
-<div class="titulo-novidades">
-  Novidades
-</div>
-<div class="titulo-receitas-favoritas">
-  Receitas favoritas
-</div>
-<div class="titulo-noticias">
-  Notícias
+<div class="main-body">
+  <div class="left-side">
+    <div class="cartao-visitas">
+      <img src="https://i.ibb.co/xqpZvXx/cartao-visita.png" alt="cartao-visita" border="0">
+      <h3>
+        Explore seu lado culinário e encontre receitas para todas as ocasiões.
+      </h3>
+      <img class="logo" src="https://i.ibb.co/0BKv2NB/logo.png" alt="logo" border="0">
+    </div>
+    <div class="receitas-favoritas">
+      <h1 class="titulo">Receitas Favoritas</h1>
+      <div class="conteiner-receitas">
+        <div class="receita">
+          <div class="texto">Bolo de Cenoura</div>
+          <img src="https://i.ibb.co/S59ZHyf/bolo-cenoura.png" alt="bolo-cenoura" border="0">
+        </div>
+        <div class="receita">
+          <div class="texto">Pão Caseiro</div>
+          <img src="https://i.ibb.co/mSh7bCv/pao-caseiro.png" alt="pao-caseiro" border="0">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="titulo-novidades">
+      <div>
+        Novidades
+      </div>
+      <div class="novidade-block">
+        <div class="receita-novidade">
+          <img src="https://i.ibb.co/8zBtr32/macarrao-cremoso.png" alt="macarrao-cremoso" border="0">
+          <div class="texto-novidades">Macarrão Cremoso</div>
+        </div>
+        <div class="receita-novidade">
+          <img src="https://i.ibb.co/6v0kZnn/bolo-formigueiro.png" alt="bolo-formigueiro" border="0">
+          <div class="texto-novidades">Bolo Formigueiro</div>
+        </div>
+      </div>
+    </div>
+    <div class="titulo-noticias">
+      Notícias
+      <h1>Sambiqueira assada</h1>
+      <h1>Sambiqueira no espeto</h1>
+    </div>
+  </div>
 </div>
