@@ -24,8 +24,6 @@ import { ReceitasService } from './Servicos/Receitas.service';
 import { ReceitasAdicionadasComponent } from './paginas/ReceitasAdicionadas/ReceitasAdicionadas.component';
 
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-
 
 
 @NgModule({
@@ -52,7 +50,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule,
+    BrowserAnimationsModule
 
   ],
   providers: [ReceitasService],
