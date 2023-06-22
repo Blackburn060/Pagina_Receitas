@@ -21,6 +21,11 @@ import { MinhasReceitasComponent } from './paginas/MinhasReceitas/MinhasReceitas
 import { HttpClientModule } from '@angular/common/http';
 import { ListaDeReceitasComponent } from './paginas/ListaDeReceitas/ListaDeReceitas.component';
 import { ReceitasService } from './Servicos/Receitas.service';
+import { ReceitasAdicionadasComponent } from './paginas/ReceitasAdicionadas/ReceitasAdicionadas.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 
 @NgModule({
@@ -31,6 +36,7 @@ import { ReceitasService } from './Servicos/Receitas.service';
     BodyComponent,
     MinhasReceitasComponent,
     ListaDeReceitasComponent,
+    ReceitasAdicionadasComponent
   ],
   imports: [
     AppRoutingModule,
@@ -45,6 +51,9 @@ import { ReceitasService } from './Servicos/Receitas.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+
   ],
   providers: [ReceitasService],
   bootstrap: [AppComponent]

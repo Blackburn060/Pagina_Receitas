@@ -3,12 +3,11 @@
     <button mat-button [matMenuTriggerFor]="menuRef" class="main-menu-item">{{ menu.label }}</button>
     <div class="separator" *ngIf="!last"></div>
     <mat-menu #menuRef="matMenu">
-      <button mat-menu-item *ngFor="let menuItem of menu.items">{{ menuItem }}</button>
+      <button  routerLink="/lista-de-receitas" mat-menu-item *ngFor="let menuItem of menu.items">{{ menuItem }}</button>
     </mat-menu>
   </ng-container>
 
 </mat-toolbar>
-
 
 <span>
   <a routerLink="/lista-de-receitas">
