@@ -1,21 +1,21 @@
 <div class="main-container">
-  <div class="imagem-receita">
-    <img src="https://i.ibb.co/rdHcwww/sem-imagem.png" alt="sem-imagem">
+  <div class="imagem-receita" *ngFor="let dados of ResponseListaDeReceitas">
+    <img src="{{ dados.url }}" alt="sem-imagem">
   </div>
   <div class="dados-gerais-receita">
-    <div class="nome-receita">
-      Nome da Receita
+    <div class="nome-receita" *ngFor="let dados of ResponseListaDeReceitas">
+        <h1> {{ dados.titulo }}</h1>
     </div>
     <div class="requisitos">
-      <div class="ingredientes">
-        <li>
-          Ingredientes:
-        </li>
+      <div class="ingredientes" *ngFor="let dados of ResponseListaDeReceitas">
+          <h2>Ingredientes:</h2>
+          <li *ngFor="let ingrediente of dados.ingredientes; let last = last">
+            {{ ingrediente }}<br *ngIf="!last">
+          </li>
       </div>
-      <div class="modo-preparo">
-        <li>
-          Modo de Preparo:
-        </li>
+      <div class="modo-preparo" *ngFor="let dados of ResponseListaDeReceitas">
+          <h2>Modo de Preparo:</h2>
+          {{ dados.modopreparo }}
       </div>
     </div>
   </div>
