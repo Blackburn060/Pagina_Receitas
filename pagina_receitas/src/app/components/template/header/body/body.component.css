@@ -8,7 +8,6 @@ button[type="botao"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  border-color: black;
   background: none;
 }
 
@@ -20,7 +19,7 @@ button[type="botao"] {
   line-height: 49px;
   text-align: center;
   color: #ff0000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.118);
 }
 
 .titulo-novidades {
@@ -30,6 +29,7 @@ button[type="botao"] {
   font-size: 36px;
   line-height: 44px;
   color: #ff4500;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
 .barra-de-pesquisa {
@@ -39,11 +39,14 @@ button[type="botao"] {
 }
 
 .barra-de-pesquisa input {
-  border: 2px solid #000;
-  background: #D9D9D9;
+  border: 1px solid #8a8a8a;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+  background-color: #f2f2f2e9;
   width: 450px;
   height: 35px;
   flex-shrink: 0;
+
+  text-indent: 7px;
 }
 
 .barra-de-pesquisa img {
@@ -54,7 +57,7 @@ button[type="botao"] {
   margin-top: 20px;
 }
 
-.titulo-noticias {
+.bloco-noticias .texto {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -62,6 +65,12 @@ button[type="botao"] {
   line-height: 44px;
   color: #000000;
 }
+
+.bloco-noticias {
+  display: flex;
+  justify-content: center;
+}
+
 
 .main-body {
   margin-left: 10%;
@@ -99,6 +108,36 @@ button[type="botao"] {
   background-color: rgba(255, 103, 47, 1);
   align-items: center;
   border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+}
+
+.cartao-visitas {
+  transition: transform 0.2s ease;
+}
+
+.cartao-visitas:hover {
+  animation: shake-rotate 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+  75% {
+    transform: rotate(-2.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .cartao-visitas h3 {
@@ -124,11 +163,15 @@ button[type="botao"] {
   font-size: 36px;
   line-height: 44px;
   color: #000000;
+  
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
 .receitas-favoritas {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
 .conteiner-receitas {
@@ -140,10 +183,17 @@ button[type="botao"] {
 .conteiner-receitas img {
   height: 200px;
   width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
 }
 
 .receita {
   display: grid;
+  transition: transform .25s ease;
+}
+
+.receita:hover {
+  transform: scale(1.025);
 }
 
 .texto {
@@ -151,15 +201,25 @@ button[type="botao"] {
   color: #000;
   font-size: 20px;
   font-weight: 700;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
-.receita-novidade{
-  display: grid;
+.receita-novidade {
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease;
+}
+
+.receita-novidade:hover {
+  transform: scale(1.025);
 }
 
 .receita-novidade img {
   width: 227px;
   height: 152px;
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
 .texto-novidades {
@@ -169,9 +229,72 @@ button[type="botao"] {
   font-weight: 900;
 }
 
-.novidade-block{
+.novidade-block {
   display: flex;
   justify-content: left;
   gap: 10px;
   flex-wrap: wrap;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+}
+
+.bloco-noticias {
+  align-items: center;
+  flex-direction: column;
+}
+
+.bloco-manchetes {
+  display: flex;
+  flex-direction: row;
+}
+
+.quadro-noticia {
+  background-color: #E9E4E4;
+  border-radius: 5px;
+  margin: 10px;
+  min-width: 200px;
+  min-height: 243px;
+  max-width: 200px;
+  max-height: 243px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+}
+
+.quadro-noticia img {
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+}
+
+.previa {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 125%;
+  margin: 10px;
+}
+
+.quadro-noticia ul {
+  font-size: 9px;
+  line-height: 100%;
+  font-weight: 700;
+  text-align: start;
+}
+
+.quadro-noticia{
+  transition: transform .25s ease;
+}
+.quadro-noticia:hover {
+  transform: scale(1.025);
+}
+
+.botao-pesquisa {
+  transition: transform 0.2s, scale 0.2s;
+}
+
+.botao-pesquisa:hover {
+  transform: rotate(45deg) scale(1.2);
 }
