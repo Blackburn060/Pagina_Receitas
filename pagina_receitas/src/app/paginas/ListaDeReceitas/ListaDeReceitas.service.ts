@@ -7,15 +7,13 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ListaDeReceitas {
+  constructor(private http: HttpClient) { }
 
-constructor(private http: HttpClient) { }
+  getReceita(TituloReceitaGet: any): Observable<any> {
+    return this.http.get<any>(`https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas?titulo=${TituloReceitaGet}`);
+  }
 
-getReceita(TituloReceitaGet: any): Observable<any> {
-  return this.http.get<any>(`https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas?titulo=${TituloReceitaGet}`);
-}
-
-createReceita(receita: any): Observable<any> {
-  return this.http.post<any>('https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas', receita);
-}
-
+  createReceita(receita: any): Observable<any> {
+    return this.http.post<any>('https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas', receita);
+  }
 }
