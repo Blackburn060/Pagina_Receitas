@@ -2,11 +2,13 @@
   <div class="titulo-principal">
     Seu Site de Receitas, rápido e prático.
   </div>
-  <div class="barra-de-pesquisa" action="/pesquisar" method="get">
-    <input type="texto" name="q" placeholder="Procure uma receita, um prato, ingrediente...">
-    <button class="botao-pesquisa" onclick="toggleAnimation()" type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png"
-        alt="botao-pesquisa" border="0"></button>
+  <div class="barra-de-pesquisa">
+    <input type="texto" name="q" [(ngModel)]="searchQuery" placeholder="Procure uma receita, um prato, ingrediente...">
+    <button class="botao-pesquisa" (click)="pesquisar()" type="botao">
+      <img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png" alt="botao-pesquisa" border="0">
+    </button>
   </div>
+
 </div>
 <div class="main-body">
   <div class="left-side">

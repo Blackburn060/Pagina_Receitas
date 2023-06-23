@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-body',
@@ -6,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
-  searchQuery: string | undefined;
-
-  clearSearch() {
-    this.searchQuery = '';
+  searchQuery: string = '';
+  constructor(private router: Router) {}
+  pesquisar() {
+    this.router.navigate(['/lista-de-receitas'], { queryParams: { q: this.searchQuery } });
   }
 }
+
+
+

@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: '', component: BodyComponent},
   {path: 'minhas-receitas', component: MinhasReceitasComponent},
   {path: 'lista-de-receitas', component: ListaDeReceitasComponent},
-  {path: 'receitas-adicionadas', component: ReceitasAdicionadasComponent}
+  {path: 'receitas-adicionadas', component: ReceitasAdicionadasComponent},
+  {path: 'body', component: BodyComponent}
 ];
 
 @NgModule({
