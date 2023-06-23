@@ -4,7 +4,7 @@
   </div>
   <div class="barra-de-pesquisa" action="/pesquisar" method="get">
     <input type="texto" name="q" placeholder="Procure uma receita, um prato, ingrediente...">
-    <button class="botao-pesquisa" type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png"
+    <button class="botao-pesquisa" onclick="toggleAnimation()" type="botao"><img src="https://i.ibb.co/Gk4WsTd/botao-pesquisa.png"
         alt="botao-pesquisa" border="0"></button>
   </div>
 </div>
@@ -39,18 +39,28 @@
       <div class="novidade-block">
         <div class="receita-novidade">
           <img src="https://i.ibb.co/8zBtr32/macarrao-cremoso.png" alt="macarrao-cremoso" border="0">
-          <div class="texto-novidades">Macarrão Cremoso</div>
+          <h4 class="texto-novidades">Macarrão Cremoso</h4>
         </div>
         <div class="receita-novidade">
           <img src="https://i.ibb.co/6v0kZnn/bolo-formigueiro.png" alt="bolo-formigueiro" border="0">
-          <div class="texto-novidades">Bolo Formigueiro</div>
+          <h4 class="texto-novidades">Bolo Formigueiro</h4>
         </div>
       </div>
     </div>
-    <div class="titulo-noticias">
-      Notícias
-      <h1>Sambiqueira assada</h1>
-      <h1>Sambiqueira no espeto</h1>
+    <div class="bloco-noticias">
+      <div class="texto">Notícias</div>
+      <div class="bloco-manchetes">
+        <div class="quadro-noticia">
+          <img src="https://i.ibb.co/1dQN550/noticia-1.png" alt="noticia-1" border="0">
+          <h4 class="previa">‘Chef’ robô aprende a criar receitas assistindo a vídeos de comida.</h4>
+          <ul>https://veja.abril.com.br/noticias-sobre/gastronomia</ul>
+        </div>
+        <div class="quadro-noticia">
+          <img src="https://i.ibb.co/6tSCNJD/noticia-2.png" alt="noticia-2" border="0">
+          <h4 class="previa">‘Chef’ robô aprende a criar receitas assistindo a vídeos de comida.</h4>
+          <ul>https://veja.abril.com.br/noticias-sobre/gastronomia</ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
