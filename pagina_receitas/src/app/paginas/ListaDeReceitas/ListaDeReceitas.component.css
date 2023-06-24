@@ -17,40 +17,56 @@
 
 .imagem-receita {
   margin-top: 6%;
-  margin-left: 8%;
+  margin-left: 6%;
 }
 
 .imagem-receita img {
-  min-height: 380px;
-  min-width: 300px;
+  min-width: 480px;
   max-width: 480px;
-  max-height: 400px;
-  border-radius: 10%;
-  border-radius: 20px 20px 20px 20px;
+  min-height: 360px;
+  max-height: 360px;
+  object-fit: cover;
+
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+  border-radius: 10px;
+}
+
+.imagem-receita img:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.524);
 }
 
 .dados-gerais-receita {
   margin-top: 6%;
-  margin-left: 4%;
+  margin-left: 1%;
 }
 
 .requisitos {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .ingredientes {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  padding-left: 15px;
-  padding-top: 50px;
 }
 
 .modo-preparo {
   font-family: 'Montserrat', sans-serif;
-  padding-top: 50px;
-  padding-left: 50px;
+  padding-top: 1%;
 }
 
+.modo-preparo h4{
+  border: 1px solid #8a8a8a;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 
+  border-radius: 5px;
 
+  font-size: 15px;
+  text-align: start;
+  max-width: 650px;
+  padding: 10px;
+  padding-top: 5px;
+}
