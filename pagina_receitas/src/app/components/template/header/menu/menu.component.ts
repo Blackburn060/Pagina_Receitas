@@ -9,32 +9,61 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
   @ViewChild('menuRef') menuRef!: MatMenuPanel<any>;
 
 
-  /* menus = [
-    { id: 1, label: 'Alimentos Saudáveis', ref: 'fitnessFood', items: ['Bowl de quinoa e legumes assados', 'Espaguete de abobrinha com almôndegas de peru', 'Omelete de claras', 'Salada de quinoa', 'Salmão assado com legumes', 'Smoothie de frutas', 'Wrap vegetariano de hummus', 'Outros'] },
-    { id: 2, label: 'Bebidas', ref: 'bebidas', items: ['Caipirinha', 'Café', 'Cha verde', 'Chocolate quente', 'Limonada', 'Mojito', 'Suco de laranja', 'Suco de maracujá', 'Smoothie de frutas0', 'Outros'] },
-    { id: 3, label: 'Bolos e Tortas', ref: 'bolosTortas', items: ['Bolo de banana', 'Bolo de cenoura', 'Bolo de chocolate', 'Bolo de milho', 'Bolo salgado', 'Torta de frango', 'Torta de limão', 'Torta de maçã', 'Torta de morango', 'Outros'] },
-    { id: 4, label: 'Carnes', ref: 'carnes', items: ['Bife à parmegiana', 'Carne assada', 'Carne de cordeiro ao molho de hortelã', 'Carne de porco à pururuca', 'Churrascos', 'Costelinha de porco ao molho barbecue', 'Espetinho de carne', 'Hambúrguer caseiro', 'Strogonoff de frango', 'Outros'] },
-    { id: 5, label: 'Comidas Brasileiras', ref: 'comidasBrasileiras', items: ['Acarajé', 'Arroz carreteiro', 'Brigadeiro', 'Feijoada', 'Frango com quiabo', 'Galinhada com pequi', 'Picadinho de carne', 'Porco à pururuca', 'Virado à paulista', 'Outros'] },
-    { id: 6, label: 'Comidas Estrangeiras', ref: 'comidasEstrangeiras', items: ['Curry ', 'Escargot', 'Fish and Chips', 'Moussaka', 'Pad Thai', 'Paella', 'Sushi', 'Tacos', 'Outros'] },
-    { id: 7, label: 'Massas', ref: 'massas', items: ['Fettuccine Alfredo', 'Farfalle com camarão e pesto de manjericão', 'Lasanha', 'Mac and cheese', 'Penne alla vodka', 'Ravióli de ricota com molho de tomate', 'Rigatoni à bolonhesa', 'Spaghetti à carbonara', 'Tortellini com molho pesto', 'Outros'] },
-    { id: 8, label: 'Sobremesas', ref: 'sobremesas', items: ['Brownie de chocolate', 'Cheesecake de frutas vermelhas', 'Mousse de maracujá', 'Pavlova', 'Pudim', 'Torta de maçã com crumble', 'Petit Gateau', 'Parfait de frutas', 'Tarte tatin', 'Outros'] },
-    { id: 9, label: 'Sopas', ref: 'sopas', items: ['Caldo verde', 'Canja de galinha', 'Sopa de legumes', 'Sopa de lentilha', 'Sopa de tomate', 'Outros'] },
-  ]; */
 
-  ResponseReceitas: any;
+  ResponseReceitas1: any; AlimentosSaudaveis: String = 'Alimentos Saudáveis';
 
-  ResponseReceitas2: any;
+  ResponseReceitas2: any; Bebidas: String = 'Bebidas'
+
+  ResponseReceitas3: any; BolosTortas: String = 'Bolos e Tortas'
+
+  ResponseReceitas4: any; Carnes: String = 'Carnes'
+
+  ResponseReceitas5: any; ComidasBrasileiras: String = 'Comidas Brasileiras'
+
+  ResponseReceitas6: any; ComidasEstrangeiras: String = 'Comidas Estrangeiras'
+
+  ResponseReceitas7: any; Massas: String = 'Massas'
+
+  ResponseReceitas8: any; Sobremesas: String = 'Sobremesas'
+
+  ResponseReceitas9: any; Sopas: String = 'Sopas'
 
   constructor(private ReceitasService: ReceitasService, private route: ActivatedRoute, private ReceitasService2: ReceitasService) { }
 
   ngOnInit() {
 
-    this.ReceitasService.getReceita().subscribe(response => {
-    this.ResponseReceitas = response;
-    console.log(this.ResponseReceitas.categoria);
+    this.ReceitasService.getReceitaParametro(this.AlimentosSaudaveis).subscribe(response => {
+    this.ResponseReceitas1 = response;
+  });
+    this.ReceitasService.getReceitaParametro(this.Bebidas).subscribe(response => {
+      this.ResponseReceitas2 = response;
+    });
+      this.ReceitasService.getReceitaParametro(this.BolosTortas).subscribe(response => {
+        this.ResponseReceitas3 = response;
+      });
+        this.ReceitasService.getReceitaParametro(this.Carnes).subscribe(response => {
+          this.ResponseReceitas4 = response;
+        });
+          this.ReceitasService.getReceitaParametro(this.ComidasBrasileiras).subscribe(response => {
+            this.ResponseReceitas5 = response;
+          });
+          this.ReceitasService.getReceitaParametro(this.ComidasEstrangeiras).subscribe(response => {
+            this.ResponseReceitas6 = response;
+          });
+          this.ReceitasService.getReceitaParametro(this.Massas).subscribe(response => {
+            this.ResponseReceitas7 = response;
+          });
+          this.ReceitasService.getReceitaParametro(this.Sobremesas).subscribe(response => {
+            this.ResponseReceitas8 = response;
+          });
+          this.ReceitasService.getReceitaParametro(this.Sopas).subscribe(response => {
+            this.ResponseReceitas9 = response;
+
+    console.log(this.ResponseReceitas1.categoria);
     });
 
   }

@@ -1,16 +1,65 @@
 <mat-toolbar class="menu">
-  <ng-container *ngFor="let menu of ResponseReceitas; let last = last">
+
+  <ng-container>
+    <button mat-button [matMenuTriggerFor]="menuRef">Alimentos Saudáveis</button>
+  <mat-menu #menuRef="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas1">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef2">Bebidas</button>
+  <mat-menu #menuRef2="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas2">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef3">Bolos e Tortas</button>
+  <mat-menu #menuRef3="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas3">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef4">Carnes</button>
+  <mat-menu #menuRef4="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas4">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef5">Comidas Brasileiras</button>
+  <mat-menu #menuRef5="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas5">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef6">Comidas Estrangeiras</button>
+  <mat-menu #menuRef6="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas6">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef7">Massas</button>
+  <mat-menu #menuRef7="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas7">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+
+  <button mat-button [matMenuTriggerFor]="menuRef8">Sobremesas</button>
+  <mat-menu #menuRef8="matMenu">
+    <button [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas8">{{ menuItem.titulo }}</button>
+  </mat-menu>
+  <div class="separator"></div>
+    <button mat-button [matMenuTriggerFor]="menuRef9">Sopas</button>
+    <mat-menu #menuRef9="matMenu">
+      <button  [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas9">{{ menuItem.titulo }}</button>
+    </mat-menu>
+  </ng-container>
+
+  <!-- <ng-container *ngFor="let menu of ResponseReceitas; let last = last">
     <button mat-button [matMenuTriggerFor]="menuRef" class="main-menu-item">{{ menu.categoria }}</button>
     <div class="separator" *ngIf="!last"></div>
     <mat-menu #menuRef="matMenu">
       <button  [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas">{{ menuItem.titulo }}</button>
     </mat-menu>
-  </ng-container>
+  </ng-container> -->
 
 </mat-toolbar>
-
-<span>
-  <a routerLink="/lista-de-receitas">
-
-  </a>
-</span>
