@@ -24,6 +24,7 @@ import { ReceitasService } from './Servicos/Receitas.service';
 import { ReceitasAdicionadasComponent } from './paginas/ReceitasAdicionadas/ReceitasAdicionadas.component';
 
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -50,8 +51,8 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     HttpClientModule,
     MatTableModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [ReceitasService],
   bootstrap: [AppComponent]
