@@ -163,7 +163,7 @@ button[type="botao"] {
   font-size: 36px;
   line-height: 44px;
   color: #000000;
-  
+
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
 }
 
@@ -275,6 +275,7 @@ button[type="botao"] {
   font-weight: 700;
   line-height: 125%;
   margin: 10px;
+  text-decoration: none;
 }
 
 .quadro-noticia ul {

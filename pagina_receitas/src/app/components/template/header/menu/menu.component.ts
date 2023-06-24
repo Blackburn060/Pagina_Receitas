@@ -32,7 +32,7 @@ export class MenuComponent implements OnInit {
 
   ResponseReceitas9: any; Sopas: String = 'Sopas'
 
-  constructor(private ReceitasService: ReceitasService, private route: ActivatedRoute, private ReceitasService2: ReceitasService) { }
+  constructor(private ReceitasService: ReceitasService) { }
 
   ngOnInit() {
 

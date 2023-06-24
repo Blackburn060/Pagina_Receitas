@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListaDeReceitas } from './ListaDeReceitas.service';
 import { ActivatedRoute } from '@angular/router';
-//import { menuItem } from '../../components/template/header/menu/menu.component';
 
 @Component({
   selector: 'app-ListaDeReceitas',
@@ -20,8 +19,6 @@ export class ListaDeReceitasComponent implements OnInit {
     this.route.params.subscribe(params => {
 
       const TituloReceitaGet = params['titulo'];
-
-      const CategoriaReceitaGet = params['categoria'];
 
     this.ListaDeReceitas.getReceitaParametro(TituloReceitaGet).subscribe(response => {
     this.ResponseListaDeReceitas = response;
