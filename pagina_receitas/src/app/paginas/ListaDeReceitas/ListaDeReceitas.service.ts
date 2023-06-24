@@ -9,7 +9,11 @@ import { catchError, retry } from 'rxjs/operators';
 export class ListaDeReceitas {
   constructor(private http: HttpClient) { }
 
-  getReceita(TituloReceitaGet: any): Observable<any> {
+  getReceita(): Observable<any> {
+    return this.http.get<any>(`https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas`);
+  }
+
+  getReceitaParametro(TituloReceitaGet: any): Observable<any> {
     return this.http.get<any>(`https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas?titulo=${TituloReceitaGet}`);
   }
 

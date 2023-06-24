@@ -1,9 +1,9 @@
 <mat-toolbar class="menu">
-  <ng-container *ngFor="let menu of menus; let last = last">
-    <button mat-button [matMenuTriggerFor]="menuRef" class="main-menu-item">{{ menu.label }}</button>
+  <ng-container *ngFor="let menu of ResponseReceitas; let last = last">
+    <button mat-button [matMenuTriggerFor]="menuRef" class="main-menu-item">{{ menu.categoria }}</button>
     <div class="separator" *ngIf="!last"></div>
     <mat-menu #menuRef="matMenu">
-      <button  routerLink="/lista-de-receitas" mat-menu-item *ngFor="let menuItem of menu.items">{{ menuItem }}</button>
+      <button  [routerLink]="['/lista-de-receitas', { titulo: menuItem.titulo }]" mat-menu-item *ngFor="let menuItem of ResponseReceitas">{{ menuItem.titulo }}</button>
     </mat-menu>
   </ng-container>
 

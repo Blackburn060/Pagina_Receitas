@@ -4,7 +4,7 @@
   </div>
   <div class="dados-gerais-receita">
     <div class="nome-receita" *ngFor="let dados of ResponseListaDeReceitas">
-        <h1> {{ dados.titulo }}</h1>
+      <h1>{{ dados.titulo }}</h1>
     </div>
     <div class="requisitos">
       <div class="ingredientes" *ngFor="let dados of ResponseListaDeReceitas">
@@ -15,7 +15,7 @@
       </div>
       <div class="modo-preparo" *ngFor="let dados of ResponseListaDeReceitas">
           <h2>Modo de Preparo:</h2>
-          {{ dados.modopreparo }}
+          <textarea name="" id="" cols="70" rows="20">{{ dados.modopreparo }}</textarea>
       </div>
     </div>
   </div>
