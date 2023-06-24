@@ -17,7 +17,24 @@ export class ReceitasService {
     return this.http.get<any>(`https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas?categoria=${CategoriaReceitaGet}`);
   }
 
-  createReceita(receita: any): Observable<any> {
-    return this.http.post<any>('https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas', receita);
+  createReceita(titulo: any, categoria: any, ingredientes: any, modopreparo: any, urlReceita: any): Observable<any> {
+    const url = 'https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas';
+
+    const body = {
+      titulo: titulo,
+      categoria: categoria,
+      ingredientes: ingredientes,
+      modopreparo: modopreparo,
+      url: urlReceita
+    };
+
+    return this.http.post(url, body);
   }
+
+  deleteReceita(id: any): Observable<any> {
+    const url = `https://648d0e9d8620b8bae7ed8954.mockapi.io/apireceitas/DadosReceitas/${id}`;
+
+    return this.http.delete(url);
+  }
+
 }

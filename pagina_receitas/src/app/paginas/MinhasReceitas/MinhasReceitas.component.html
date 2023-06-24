@@ -6,21 +6,21 @@
         <form>
           <div class="form-group">
             <label for="nome">Nome da Receita:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input [(ngModel)]="postTitulo" type="text" id="nome" name="nome" required>
           </div>
 
           <div class="form-group">
             <label for="categoria">Categoria:</label>
-            <select id="categoria" name="categoria" required>
+            <select [(ngModel)]="postCategoria" id="categoria" name="categoria" required>
               <option value="">Selecione uma categoria</option>
-              <option value="Alimentos saudavais">Alimentos saudaveis</option>
+              <option value="Alimentos saudáveis">Alimentos saudáveis</option>
               <option value="Bebidas">Bebidas</option>
-              <option value="Bolos e tortas">Bolos e tortas</option>
+              <option value="Bolos e Tortas">Bolos e Tortas</option>
               <option value="Carnes">Carnes</option>
-              <option value="Comidas brasileiras">Comidas brasileiras</option>
-              <option value="Comidas estrangeiras">Comidas estrangeiras</option>
+              <option value="Comidas Brasileiras">Comidas Brasileiras</option>
+              <option value="Comidas Estrangeiras">Comidas Estrangeiras</option>
               <option value="Massas">Massas</option>
-              <option value="sobremesa">Sobremesa</option>
+              <option value="Sobremesas">Sobremesas</option>
               <option value="Sopas">Sopas</option>
               <option value="Outras">Outras</option>
             </select>
@@ -28,12 +28,12 @@
 
           <div class="form-group">
             <label for="ingredientes">Ingredientes:</label>
-            <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+            <textarea [(ngModel)]="postIngredientes" id="ingredientes" name="ingredientes" rows="4" required></textarea>
           </div>
 
           <div class="form-group">
             <label for="modo-preparo">Modo de Preparo:</label>
-            <textarea id="modo-preparo" name="modo-preparo" rows="4" required></textarea>
+            <textarea [(ngModel)]="postModopreparo" id="modo-preparo" name="modo-preparo" rows="4" required></textarea>
           </div>
         </form>
       </div>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="buttons" routerLink="/receitas-adicionadas">
-      <button type="submit">Adicionar Receita</button>
+      <button (click)="enviarPost()" type="submit">Adicionar Receita</button>
     </div>
   </div>
 </div>

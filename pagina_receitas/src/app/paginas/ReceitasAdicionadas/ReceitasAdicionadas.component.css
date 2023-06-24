@@ -8,7 +8,8 @@
 }
 
 
-/* table {
-width: 200px;
-height: 200px;
-} */
+.BotaoDeOpcao {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReceitasService } from '../../Servicos/Receitas.service';
 
 interface Image {
   url: string;
@@ -12,7 +13,28 @@ interface Image {
 
 
 export class MinhasReceitasComponent implements OnInit {
-  constructor() { }
+
+  ResponseIserirReceita: any;
+  postTitulo!: string;
+  postCategoria!: string;
+  postIngredientes!: [];
+  postModopreparo!: string;
+  postUrl!: string;
+
+  enviarPost(){
+
+    const titulo = this.postTitulo;
+    const categoria = this.postCategoria;
+    const ingredientes = this.postIngredientes;
+    const modopreparo = this.postModopreparo;
+    const url = this.postUrl;
+
+      this.ReceitasService.createReceita(titulo, categoria, ingredientes, modopreparo, url).subscribe(response => {
+        console.log(this.ResponseIserirReceita);
+        });
+      }
+
+  constructor(private ReceitasService: ReceitasService) { }
 
   ngOnInit() {
   }
@@ -33,5 +55,6 @@ export class MinhasReceitasComponent implements OnInit {
     if (index !== -1) {
       this.images.splice(index, 1);
     }
+
   }
 }
