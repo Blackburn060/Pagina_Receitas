@@ -5,6 +5,7 @@
     top: 105px;
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(to right, #ec8757 2%, #ec8757 100%);
 }
 
 mat-tab-group {
@@ -20,3 +21,4 @@ mat-tab-group {
     margin: 0 10px;
     height: 30%;
 }
+
