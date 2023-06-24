@@ -3,8 +3,6 @@
     align-items: center;
     height: 80px;
     background-color: #FF672F;
-    background-image: linear-gradient(to right, #ff7f50 2%, #7cfa7c 50%, #6e6efc 100%);
-    border-radius: 1%;
 }
 
 .header .logo {
@@ -46,8 +44,4 @@
     max-width: 75px;
     max-height: 75px;
     padding-left: 5px;
-}
-
-.header .entrada-usuario:hover{
-    transform: scale(0.9);
 }
